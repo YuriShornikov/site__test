@@ -1,0 +1,219 @@
+@media (min-width: 769px) {
+    
+    /* contact-panel */
+
+    .contact-panel {   
+        padding: 6px 12px 6px 0px;  
+    }
+    
+    
+    /* Скрыл в контакт панели кнопку отправить */
+    .contact-panel__item-list:nth-child(1) {
+        display: none;
+    }
+    
+    .btn.translate {
+        border-radius: 10px 0 0 10px;
+    }
+        
+    /* sub-tool-panel */
+    
+    .sub-tool-panel {
+        width: 263px;
+        height: 320px;
+        position: absolute;
+        z-index: 1;
+        top: -93px;
+        left: 72px;
+    
+        border-radius: 12px;
+        border: none;
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 4px 0px #00000040;
+    
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .sub-tool-panel__base-scroll {
+        width: 7px;
+        height: 298px;
+        
+        border-radius: 89px;
+        background-color: #ECECEC;
+        margin: 10px 8px 10px 0px;
+    }
+    
+    .sub-tool-panel__scroll {
+        width: 7px;
+        height: 130px;
+        border-radius: 50px;
+        border: none;
+        background-color: #1043C7;
+    }
+    
+    .sub-tool-panel__scroll:active {
+        background-color: #FFFFFF;
+        border: 1px solid #1043C7;
+    }
+    
+    .sub-tool-panel__list {
+        width: 100%;
+        list-style: none;
+        padding: 10px 8px 10px 10px;
+    
+        overflow-y: hidden;
+        display: grid;
+        grid-template-columns: repeat(2, 5fr);
+        gap: 10px;
+        justify-content: center;
+    
+    }
+    
+    .sub-tool-panel__item-list {
+        list-style: none;
+        width: 110px;
+        height: 110px;
+    
+        border-radius: 8px;
+        box-shadow: 1px 2px 5px 1px #00000040;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sub-tool-panel__item-list:active {
+        border: 2px solid #1043C7;
+    }
+    
+    .sub-tool-panel__item-list img {
+        width: 82px;
+        height: 82px;
+    }
+    
+    /* sub-tool-panel__colors */
+    
+    .sub-tool-panel__colors {
+        width: 250px;
+        height: 79px;
+    
+        position: absolute;
+        z-index: 1;
+        top: 237px;
+        left: 72px;
+    
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        background-color: #FFFFFF;
+    
+        display: flex;
+    
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .sub-tool-panel__colors-list {
+        width: 100%;
+        height: 40px;
+        padding: 5px 12px;
+        list-style: none;
+    
+        display: flex;
+        gap: 6px;
+        flex-direction: row;
+    }
+    
+    .sub-tool-panel__colors-item {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    
+    .sub-tool-panel__colors-item:nth-child(2) {
+        background-color: #DE3C3C;
+    }
+    
+    .sub-tool-panel__colors-item:nth-child(3) {
+        background-color: #000000;
+    }
+    
+    .sub-tool-panel__colors-item:nth-child(4) {
+        background-color: #33FF00;
+    }
+    
+    .sub-tool-panel__colors-item:nth-child(5) {
+        background-color: #33FF00;
+    }
+    
+    .sub-tool-panel__width-list {
+        height: 39px;
+        list-style: none;
+    
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        gap: 14px;
+    }
+    
+    .sub-tool-panel__lines-item {
+        width: 28px;
+        height: 28px;
+        margin: 7px 0px 4px 13px;
+    }
+    
+    .sub-tool-panel__lines-item:active {
+        background-color: #1043C7;
+    }
+    
+    .sub-tool-panel__lines-item:active path {
+        fill: #FFFFFF;
+    }
+    
+    .sub-tool-panel__width-item {
+        width: 72px;
+        height: 20px;
+        margin: 10px 0px 9px 0px;
+    
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+    
+    .btn.math {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: none;
+        background-color: #F1DADA;
+    }
+    
+    .sub-tool-panel__width-item__count {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.36px;
+    }
+    
+    /* .sub-tool-panel__lines-item:active {
+        background-color: #1043C7;
+    }
+    
+    .sub-tool-panel__lines-item:active path { 
+        fill: #FFFFFF;
+    } */
+    
+    
+    
+    /* скрываем панель sub-tool-panel */
+    
+    .sub-tool-panel {
+        display: none;
+    }
+    
+    /* скрываем панель sub-tool-panel__colors */
+    
+    .sub-tool-panel__colors {
+        display: none;
+    }
+}

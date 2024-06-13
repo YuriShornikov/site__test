@@ -1,0 +1,433 @@
+/* подключение шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;;
+}
+
+.desk {
+    max-width: 1440px;
+    max-height: 2014px;
+    background-color: #E9E9E9;
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+    .desk {
+        width: 100%;
+        height: 100vh;
+    }
+
+    
+
+    .mobile-top, .top-mobile-panel {
+        display: none;
+    }
+
+    .top-panel {
+        max-width: 474px;
+        max-height: 52px;
+        border-radius: 10px;
+    
+        position: fixed;
+        z-index: 1;
+        top: 18px;
+        left: 14px;
+        display: flex;
+        flex-direction: row;
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 4px 0px #00000040;
+    }
+    
+    .top-panel__list {
+        list-style: none;
+    
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;        
+    }
+    
+    .top-panel__item-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    .top-panel__item-list:nth-child(4) {
+        width: 42px;
+    }
+    
+    .label {
+        margin: 4px 12px 4px 12px;
+        width: 132px;
+        height: 44px;
+    }
+    
+    .logo {
+        width: 128px;
+        height: 42px;
+        margin: 1px 0px 0px 2px;
+    }
+    
+    .separator {
+        position: relative;
+        z-index: 1;
+        height: 0px;
+        width: 0px;
+    }
+    
+    .separator.horizont {
+        margin-bottom: 40px;
+    }
+    
+    .separator::before {
+        content: "";
+        position: absolute;
+        height: 40px;
+        border-left: 1px solid #D7D7D7;
+    }
+    
+    .step {
+        max-width: 84px;
+        max-height: 52px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .step__btn {
+        max-width: 84px;
+        max-height: 52px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .step__back {
+        height: 52px;
+        width: 42px;
+        padding: 0px 6px 0px 12px;
+    }
+    
+    .step__direct {
+        margin: 0px 12px 0px 6px;
+    }
+    
+    
+
+    /* contact-panel */
+
+    .contact-panel {
+        position: fixed;
+        top: 18px;
+        right: 12px;
+
+        padding: 6px 12px 6px 12px; 
+        border-radius: 10px;
+        
+        box-shadow: 0px 4px 4px 0px #00000040;
+    }
+
+
+
+    .task__send {
+        max-width: 141px;
+        max-height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .btn.send {
+        width: 129px;
+        height: 24px;
+        border: none;
+        border-radius: 4px;
+        background-color: #1043C7;
+        padding: 5px 6px; 
+
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 14.52px;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .btn.send:active {
+        color: #1043C7;
+        background-color: #FFFFFF;
+    }
+
+    .video__call {
+        max-width: 201px;
+        max-height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video {
+        width: 20px;
+        height: 16px;
+    }
+
+    .person {
+        max-width: 105px;
+        max-height: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        align-items: center;
+    }
+
+    .separator-mobile {
+        display: none;
+    }
+
+    .name {
+        width: 81px;
+        height: 16px;
+
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 14.52px;
+        text-align: center;
+    }
+
+    .menu__save__function {
+        height: 52px;
+        width: 48px;
+        padding: 0px 12px 0px 12px;
+    }
+
+    .photo-pk {
+        width: 36px;
+        height: 36px;
+        border-radius: 6px;
+        border: none;
+        margin-left: 12px;
+    }
+
+    .photo-iphone {
+        display: none;
+    }
+
+    /* tool-panel */
+
+    .tool-panel {
+        width: 52px;
+        height: 528px;
+
+        position: fixed;
+        z-index: 1;
+        top: 130px;
+        left: 18px;
+        border-radius: 6px;
+        border: none;
+        background-color: #1043C7;
+        box-shadow: 4px 4px 4px 0px #00000040;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn.redactor, .btn.shapes {
+        position: relative;
+        z-index: 2;
+        width: 52px;
+        height: 44px;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* .btn.redactor active */
+
+    .btn.redactor:nth-child(1):active {
+        border-radius: 6px 6px 0px 0px;
+        box-shadow: 0 1px 0 0 #FFFFFF;
+        background: #FFFFFF;
+    }
+
+    .btn.redactor:nth-last-child(1):active {
+        border-radius: 0px 0px 6px 6px;
+        box-shadow: 0 1px 0 0 #FFFFFF;
+        background: #FFFFFF;
+    }
+
+    .btn.redactor:active, .btn.shapes:active {
+        box-shadow: 0 1px 0 0 #FFFFFF;
+        background: #FFFFFF;
+    }
+
+    .redactor__icon {
+        width: 52px;
+        height: 44px;
+        padding: 10px 16px;
+    }
+
+    .btn.shapes:active .redactor__icon path {
+        stroke: #1043C7;
+    }
+
+    .btn.redactor:active .redactor__icon path {
+        fill: #1043C7;
+    }
+
+    .separator.skyline {
+        transform: rotate(90deg);
+        margin-left: 40px;
+    }
+
+    .mobile-footer {
+        display: none;
+    }
+
+    /* scale */
+
+    .scale-panel {
+        max-width: 286px;
+        max-height: 52px;
+
+        position: fixed;
+        z-index: 1;
+        bottom: 16px;
+        right: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .btns__scale {
+        max-width: 114px;
+        max-height: 52px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .btn.scale {
+        width: 52px;
+        height: 52px;
+        border-radius: 6px;
+        border: none;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        background-color: #1043C7;
+        cursor: pointer;
+
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29.05px;
+        color: #FFFFFF;
+    }
+
+    .btn.scale:active {
+        color: #1043C7;
+        background-color: #FFFFFF;
+    }
+
+    .scale__view {
+        width: 152px;
+        height: 52px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        background-color: #1043C7;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .scale__view__text, .scale__view__percent {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.36px;
+        color: #FFFFFF;
+    }
+}
+
+
+.btn {
+    position: relative;
+    z-index: 2;
+    width: 48px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+
+
+.menu__save__function.four {
+    height: 52px;
+    width: 42px;
+    padding: 0px 12px 0px 12px;
+}
+
+.btn:active {
+    background-color: #1043C7;
+    box-shadow: 0 0 0 1px #1043C7;
+}
+
+.top-panel__item-list:nth-last-child(1) .btn:active {
+    border-radius: 0 10px 10px 0;
+}
+
+.btn:active .step__back path, .btn:active .menu__save__function path {
+    fill: #FFFFFF;
+}
+
+
+/* contact-panel */
+
+.contact-panel {
+    max-width: 366px;
+    max-height: 52px;
+    
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+.contact-panel__list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-panel__item-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

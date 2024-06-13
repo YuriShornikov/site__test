@@ -1,0 +1,103 @@
+/* sub-tool-panel__pen */
+
+@media (min-width: 769px) {
+
+    .sub-tool-panel__pen {
+        width: 197px;
+        height: 138px;
+
+        position: absolute;
+        z-index: 1;
+        left: 72px;
+        top: 116px;
+
+        border-radius: 12px;
+        border: none;
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 4px 0px #00000040;
+
+    }
+
+    .sub-tool-panel__pen-list, .sub-tool-panel__pen-colors, .sub-tool-panel__pen-width-list {
+        list-style: none;
+    }
+
+    .sub-tool-panel__pen-list {
+        padding: 14px 0px 12px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .sub-tool-panel__pen-item, .sub-tool-panel__pen-colors {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+    }
+
+    .sub-tool-panel__pen-item-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sub-tool-panel__pen-item-icon.active rect {
+        stroke: #1043C7;
+    }
+
+    .sub-tool-panel__colors-item:nth-child(2) {
+        background-color: #DE3C3C;
+    }
+
+    .sub-tool-panel__colors-item:nth-child(3) {
+        background-color: #000000;
+    }
+
+    .sub-tool-panel__colors-item:nth-child(4) {
+        background-color: #33FF00;
+    }
+
+    .sub-tool-panel__colors-item:nth-child(5) {
+        background-color: #33FF00;
+    }
+
+    .sub-tool-panel__pen-width-list {
+        display: flex;
+        flex-direction: row;
+        gap: 14px;
+        padding: 0px 0px 12px 1px;
+    }
+
+    .sub-tool-panel__pen-lines-item {
+        width: 28px;
+        height: 28px;
+    }
+
+    .sub-tool-panel__pen-width-item {
+        width: 72px;
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        margin-top: 3px;
+    }
+
+    .btn.math {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: none;
+        background-color: #F1DADA;
+    }
+
+    .sub-tool-panel__width-item__count {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.36px;
+    }
+
+    /* Убираем .sub-tool-panel__pen */
+
+    .sub-tool-panel__pen {
+        display: none;
+    }
+}
