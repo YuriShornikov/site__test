@@ -17,6 +17,10 @@ body {
     background-color: #E9E9E9;
 }
 
+/* @media (min-width: 1441px) {
+
+} */
+
 @media (min-width: 769px) {
     .desk {
         width: 100%;
