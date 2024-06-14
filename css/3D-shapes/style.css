@@ -1,74 +1,32 @@
-/* sub-tool-panel-3D-shapes */
+/* шириной от 769px или горизонтальное расположение экрана */
 
-@media (min-width: 769px) {
+@media (min-width: 769px), (orientation: landscape) {
+    
     .sub-tool-panel-3D-shapes {
-        width: 250px;
+        width: 263px;
         height: 320px;
     
-        position: absolute;
-        z-index: 1;
         left: 72px;
         top: -435px;
     
         border-radius: 12px;
-        border: none;
-        background-color: #FFFFFF;
         box-shadow: 0px 4px 4px 0px #00000040;
-    
-        display: flex;
-        flex-direction: row;
     }
-    
-    /* .sub-tool-panel__base-scroll {
-        width: 7px;
-        height: 298px;
-        
-        border-radius: 89px;
-        background-color: #ECECEC;
-        margin: 10px 8px 10px 0px;
-    }
-    
-    .sub-tool-panel__scroll {
-        width: 7px;
-        height: 130px;
-        border-radius: 50px;
-        border: none;
-        background-color: #1043C7;
-    }
-    
-    .sub-tool-panel__scroll:active {
-        background-color: #FFFFFF;
-        border: 1px solid #1043C7;
-    } */
     
     .sub-tool-panel__3D-shapes-list {
-        width: 100%;
-        list-style: none;
         padding: 10px 8px 10px 10px;
-    
-        overflow: hidden;
-        /* display: flex; */
-        display: grid;
-        grid-template-columns: repeat(2, 4fr);
-        gap: 10px;
-        justify-content: center;
-    
+        gap: 10px;  
     }
     
     .sub-tool-panel__3D-shapes-item-list {
-        list-style: none;
         width: 110px;
         height: 110px;
     
         border-radius: 8px;
         box-shadow: 1px 2px 5px 1px #00000040;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     
-    .sub-tool-panel__3D-shapes-item-list.active {
+    .sub-tool-panel__3D-shapes-item-list:active {
         border: 2px solid #1043C7;
     }
     
@@ -84,32 +42,14 @@
         width: 250px;
         height: 79px;
     
-        position: absolute;
-        z-index: 1;
         top: -105px;
         left: 72px;
-    
-        border-radius: 12px;
-        border: none;
-        box-shadow: 0px 4px 4px 0px #00000040;
-        background-color: #FFFFFF;
-    
-        display: flex;
-    
-        flex-direction: column;
-        justify-content: center;
     }
     
     
     .sub-tool-panel__3D-shapes-colors-list {
-        width: 100%;
         height: 40px;
-        padding: 5px 12px;
-        list-style: none;
-    
-        display: flex;
         gap: 6px;
-        flex-direction: row;
     }
     
     .sub-tool-panel__3D-shapes-colors-item {
@@ -117,30 +57,13 @@
         height: 30px;
         border-radius: 50%;
     }
-    
-    .sub-tool-panel__3D-shapes-colors-item:nth-child(2) {
-        background-color: #DE3C3C;
-    }
-    
-    .sub-tool-panel__3D-shapes-colors-item:nth-child(3) {
-        background-color: #000000;
-    }
-    
-    .sub-tool-panel__3D-shapes-colors-item:nth-child(4) {
-        background-color: #33FF00;
-    }
-    
-    .sub-tool-panel__3D-shapes-colors-item:nth-child(5) {
-        background-color: #33FF00;
+
+    .sub-tool-panel__3D-shapes-colors-item:nth-child(6) {
+        display: none;
     }
     
     .sub-tool-panel__3D-shapes-width-list {
         height: 39px;
-        list-style: none;
-    
-        display: flex;
-        flex-direction: row;
-        align-content: center;
         gap: 14px;
     }
     
@@ -150,30 +73,16 @@
         margin: 7px 0px 4px 13px;
     }
     
-    .sub-tool-panel__3D-shapes-lines-item:active {
-        background-color: #1043C7;
-    }
-    
-    .sub-tool-panel__3D-shapes-lines-item:active path {
-        fill: #FFFFFF;
-    }
-    
     .sub-tool-panel__3D-shapes-width-item {
         width: 72px;
         height: 20px;
         margin: 10px 0px 9px 0px;
-    
-        display: flex;
-        flex-direction: row;
         gap: 12px;
     }
     
     .btn.math {
         width: 20px;
         height: 20px;
-        border-radius: 50%;
-        border: none;
-        background-color: #F1DADA;
     }
     
     .sub-tool-panel__3D-shapes-width-item__count {
@@ -181,27 +90,242 @@
         font-weight: 600;
         line-height: 19.36px;
     }
-    
-    /* .sub-tool-panel__lines-item:active {
-        background-color: #1043C7;
-    }
-    
-    .sub-tool-panel__lines-item:active path { 
-        fill: #FFFFFF;
-    } */
-    
-    
-    
-    /* скрываем панель .sub-tool-panel-3D-shapes */
-    
+}
+
+/* шириной до 768px и в вертикальном расположении */
+
+@media (max-width: 768px) and (orientation: portrait) {
+
     .sub-tool-panel-3D-shapes {
-        display: none;
+        width: 142px;
+        height: 136px;
+    
+        position: absolute;
+        z-index: 1;
+        left: 43px;
+        top: -83px;
+    
+        border-radius: 10px;
+        border: none;
+        background-color: #FFFFFF;
+        box-shadow: 0px 4px 4px 0px #00000040;
+    
+        display: flex;
+        flex-direction: row;
     }
     
-    /* скрываем панель sub-tool-panel__colors */
+    .sub-tool-panel__3D-shapes-list {
+        padding: 6px 4px 6px 6px;
+        gap: 4px;
+    }
     
+    .sub-tool-panel__3D-shapes-item-list {
+        width: 60px;
+        height: 60px;
+    
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px 0px #00000040;
+    }
+
+    .sub-tool-panel__3D-shapes-item-list img {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .sub-tool-panel__3D-shapes-item-list:active {
+        border: 2px solid #1043C7;
+    }
+    
+    /* .sub-tool-panel-3D-shapes-colors  */
+
     .sub-tool-panel-3D-shapes-colors {
-        display: none;
+        width: 140px;
+        height: 52px;
+
+        top: 59px;
+        left: 43px;
+    }
+    
+    .sub-tool-panel__3D-shapes-colors-list {
+        width: 100%;
+        height: 26px;
+        gap: 4px;
+        padding: 5px 12px;
+    }
+    
+    .sub-tool-panel__3D-shapes-colors-item {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+    }
+    
+    .sub-tool-panel__3D-shapes-colors-item:nth-child(1) svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .sub-tool-panel__3D-shapes-colors-item:nth-child(6) {
+        background-color: #3B682F;
+    }
+    
+    .sub-tool-panel__3D-shapes-width-list {
+        height: 26px;
+        gap: 10px;
+    }
+    
+    .sub-tool-panel__3D-shapes-lines-item {
+        width: 16px;
+        height: 16px;
+        margin: 2px 0px 8px 12px;
+    }
+
+    .sub-tool-panel__3D-shapes-lines-item svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .sub-tool-panel__3D-shapes-width-item {
+        max-width: 48px;
+        height: 17px;
+        margin: 1px 0px 8px 0px;
+        gap: 4px;
+    }
+    
+    .btn.math {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .sub-tool-panel__3D-shapes-width-item__count {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
     }
 }
 
+
+/* Общие свойства */
+
+/* .sub-tool-panel-3D-shapes */
+
+.sub-tool-panel-3D-shapes {
+    position: absolute;
+    z-index: 1;
+    border: none;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-tool-panel__3D-shapes-list {
+    width: 100%;
+    list-style: none;
+
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    justify-content: center;
+}
+
+.sub-tool-panel__3D-shapes-item-list {
+    list-style: none;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-tool-panel__3D-shapes-item-list:active {
+    border: 2px solid #1043C7;
+}
+
+/* .sub-tool-panel-3D-shapes-colors  */
+
+.sub-tool-panel-3D-shapes-colors {
+    position: absolute;
+    z-index: 1;
+
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.sub-tool-panel__3D-shapes-colors-list {
+    width: 100%;
+    padding: 5px 12px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-tool-panel__3D-shapes-colors-item:nth-child(2) {
+    background-color: #DE3C3C;
+}
+
+.sub-tool-panel__3D-shapes-colors-item:nth-child(3) {
+    background-color: #000000;
+}
+
+.sub-tool-panel__3D-shapes-colors-item:nth-child(4) {
+    background-color: #33FF00;
+}
+
+.sub-tool-panel__3D-shapes-colors-item:nth-child(5) {
+    background-color: #33FF00;
+}
+
+.sub-tool-panel__3D-shapes-colors-item:active {
+    border: 2px solid #1043C7;
+}
+
+.sub-tool-panel__3D-shapes-width-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.sub-tool-panel__3D-shapes-lines-item:active {
+    background-color: #1043C7;
+}
+
+.sub-tool-panel__3D-shapes-lines-item:active path {
+    fill: #FFFFFF;
+}
+
+.sub-tool-panel__3D-shapes-width-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn.math {
+    border-radius: 50%;
+    border: none;
+    background-color: #F1DADA;
+}
+
+/* .sub-tool-panel__lines-item:active {
+    background-color: #1043C7;
+}
+    
+.sub-tool-panel__lines-item:active path { 
+    fill: #FFFFFF;
+} */
+    
+    
+    
+/* скрываем панель .sub-tool-panel-3D-shapes */
+    
+.sub-tool-panel-3D-shapes {
+    display: none;
+}
+    
+/* скрываем панель sub-tool-panel__colors */
+    
+.sub-tool-panel-3D-shapes-colors {
+    display: none;
+}
