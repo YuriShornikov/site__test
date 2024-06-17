@@ -471,28 +471,36 @@ body {
 
 /* .btn.redactor active */
 
-.btn.redactor:nth-child(1):active {
+.menu-grab:active .btn.redactor,
+.menu-grab:hover .btn.redactor {
     border-radius: 6px 6px 0px 0px;
     box-shadow: 0 1px 0 0 #FFFFFF;
     background: #FFFFFF;
     }
 
-.btn.redactor:nth-last-child(1):active {
+/* .btn.redactor:nth-last-child(1):active,
+.btn.redactor:nth-last-child(1):hover {
     border-radius: 0px 0px 6px 6px;
     box-shadow: 0 1px 0 0 #FFFFFF;
     background: #FFFFFF;
-}
+} */
 
-.btn.redactor:active, .btn.shapes:active {
+.btn.redactor:active, .btn.shapes:active,
+.btn.redactor:hover, .btn.shapes:hover 
+{
     box-shadow: 0 1px 0 0 #FFFFFF;
     background: #FFFFFF;
 }
 
-.btn.shapes:active .redactor__icon path {
+.btn.shapes:active .redactor__icon path,
+.btn.shapes:hover .redactor__icon path
+{
     stroke: #1043C7;
 }
 
-.btn.redactor:active .redactor__icon path {
+.btn.redactor:active .redactor__icon path,
+.btn.redactor:hover .redactor__icon path
+{
     fill: #1043C7;
 }
 
@@ -563,3 +571,35 @@ body {
     line-height: 19.36px;
     color: #FFFFFF;
 }
+
+
+
+.menu-pen, .menu-shapes {
+    position: relative;
+    display: inline-block;
+}
+
+.sub-tool-panel__pen, 
+.sub-tool-panel, .sub-tool-panel__colors, 
+.sub-tool-panel-3D-shapes, .sub-tool-panel-3D-shapes-colors {
+    display: none;
+}
+
+.menu-pen:hover .sub-tool-panel__pen,
+.menu-pen:focus-within .sub-tool-panel__pen
+ {
+    display: block;
+}
+
+.menu-shapes:hover .sub-tool-panel,
+.menu-shapes:focus-within .sub-tool-panel,
+.menu-shapes:hover .sub-tool-panel__colors,
+.menu-shapes:focus-within .sub-tool-panel__colors,
+.menu-3D-shapes:hover .sub-tool-panel-3D-shapes,
+.menu-3D-shapes:focus-within .sub-tool-panel-3D-shapes,
+.menu-3D-shapes:hover .sub-tool-panel-3D-shapes-colors,
+.menu-3D-shapes:focus-within .sub-tool-panel-3D-shapes-colors
+ {
+    display: flex;
+}
+
