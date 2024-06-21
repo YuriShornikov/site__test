@@ -1,20 +1,30 @@
 /* шириной от 769px или горизонтальное расположение экрана */
+/* @media (min-width: 1441px) {
+    .contact-panel {
+        left: 1211px;
+    }
+} */
+
+
+/* шириной от 769px или горизонтальное расположение экрана */
 @media (min-width: 769px), (orientation: landscape) {
     
     /* contact-panel */
 
-    .contact-panel {   
+    /* .contact-panel {
         padding: 6px 12px 6px 0px;  
-    }
+    } */
     
     /* Скрыл в контакт панели кнопку отправить */
-    .contact-panel__item-list:nth-child(1) {
+    /* .contact-panel__item-list:nth-child(1) {
         display: none;
-    }
+    } */
+
+
     
-    .btn.translate {
+    /* .btn.translate {
         border-radius: 10px 0 0 10px;
-    }
+    } */
         
     /* sub-tool-panel */
 
@@ -118,7 +128,18 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 19.36px;
-    }    
+    }
+
+    .square {
+        display: none;
+        width: 626px;
+        height: 626px;
+        position: absolute;
+        z-index: 1;
+        top: 404px;
+        left: 377px;
+        border: 4px solid #33FF00;
+    }  
 }
 
 /* шириной до 768px и в вертикальном расположении */
@@ -139,6 +160,7 @@
     .sub-tool-panel {
         top: 0px;
         left: 0px;
+        height: 190px;
     }
 
     .sub-tool-panel__shapes {
@@ -213,9 +235,14 @@
     }
     
     .sub-tool-panel__lines-item {
+        margin: 2px 0px 8px 12px;
+        width: 16px;
+        height: 16px;    
+    }
+
+    .sub-tool-panel__lines-btn {
         width: 16px;
         height: 16px;
-        margin: 2px 0px 8px 12px;
     }
 
     .sub-tool-panel__lines-item svg {
@@ -240,6 +267,17 @@
         font-weight: 500;
         line-height: 16.94px;
     }
+
+    .square {
+        display: none;
+        width: 140px;
+        height: 140px;
+        position: absolute;
+        z-index: 1;
+        top: 140px;
+        left: 149px;
+        border: 4px solid #33FF00;
+    }
 }
 
 
@@ -249,7 +287,7 @@
     
 .sub-tool-panel {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     border: none;
     flex-direction: row;
 }
@@ -257,6 +295,8 @@
 .sub-tool-panel__shapes {
     background-color: #FFFFFF;
     display: flex;
+
+    
 }
 
 .sub-tool-panel__base-scroll {
@@ -283,6 +323,7 @@
     display: grid;
     grid-template-columns: repeat(2, 5fr);
     justify-content: center;
+
 }
 
 .sub-tool-panel__item-list {
@@ -297,7 +338,7 @@
     
 .sub-tool-panel__colors {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
    
     border-radius: 12px;
     border: none;
@@ -352,7 +393,8 @@
     background-color: #1043C7;
 }
 
-.sub-tool-panel__lines-item:active path {
+.sub-tool-panel__lines-item:active path,
+.sub-tool-panel__lines-btn:active path {
     fill: #FFFFFF;
 }
 
@@ -367,13 +409,7 @@
     background-color: #F1DADA;
 }
 
-
-
-    /* .sub-tool-panel__lines-item:active {
-        background-color: #1043C7;
-    }
-    
-    .sub-tool-panel__lines-item:active path { 
-        fill: #FFFFFF;
-    } */
-
+/* наведение для квадрата */
+/* .sub-tool-panel__item-list:hover .square {
+    display: block;
+} */
