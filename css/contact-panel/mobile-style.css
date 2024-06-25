@@ -1,0 +1,79 @@
+/* шириной до 768px и в вертикальном расположении */
+@media (max-width: 768px) and (orientation: portrait) {
+
+    /* .contact-panel */
+
+    .contact-panel {
+        width: 102px;
+        height: 36px;
+
+        position: fixed;
+        z-index: 1;
+        top: 76px;
+        right: 16px;
+        border-radius: 6px;
+        border: none;
+
+        display: flex;
+    }
+
+    /* Скрыл в контакт панели кнопку отправить */
+
+    /* .contact-panel__item-list:nth-child(1) {
+        display: none;
+    } */
+    
+    .video__call {
+        max-width: 70px;
+        max-height: 36px;
+    }
+
+    .btn.translate {
+        width: 32px;
+        height: 36px;
+    }
+
+    .btn.translate:active {
+        border-radius: 6px 0px 0px 6px;
+    }
+
+    .menu__save__function {
+        width: 32px;
+        height: 36px;
+        padding: 4px 8px;
+    }
+
+    .menu__save__function.four {
+        height: 36px;
+        width: 30px;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .person {
+        display: none;
+    }
+
+    .separator-mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    .separator.horizont::before {
+        content: "";
+        position: absolute;
+        height: 28px;
+        border-left: 1px solid #D7D7D7;
+        margin-top: -14px;
+    }
+
+    .photo-pk {
+        display: none;
+    }
+
+    .photo-iphone {
+        width: 38px;
+        height: 36px;
+        padding: 2px 8px 6px 8px;
+    }
+}
+

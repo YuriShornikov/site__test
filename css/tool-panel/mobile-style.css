@@ -1,0 +1,38 @@
+/* шириной до 768px и в вертикальном расположении */
+@media (max-width: 768px) and (orientation: portrait) {
+
+    /* .tool-panel */
+
+    .tool-panel {
+        width: 36px;
+        height: 384px;
+
+        position: fixed;
+        z-index: 2;
+        top: 76px;
+        left: 16px;
+        box-shadow: 2px 0px 4px 0px #00000040;
+    }
+
+    .btn.redactor, .btn.shapes {
+        width: 36px;
+        height: 32px;
+    }
+
+    /* .btn.redactor active */
+
+    .redactor__icon {
+        width: 32px;
+        height: 36px;
+        padding: 8px 10px;
+    }
+
+    .separator.skyline::before {
+        content: "";
+        position: absolute;
+        height: 28px;
+        border-left: 1px solid #D7D7D7;
+        margin-top: 6px;
+    }
+}
+

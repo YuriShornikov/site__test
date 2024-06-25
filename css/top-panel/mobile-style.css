@@ -1,0 +1,58 @@
+/* шириной до 768px и в вертикальном расположении */
+@media (max-width: 768px) and (orientation: portrait) {
+
+    /* .top-panel */
+
+    .top-panel__list {
+        width: auto;
+        height: 36px;
+
+        position: fixed;
+        z-index: 2;
+        bottom: 44px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: #FFFFFF;
+        border-radius: 6px;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .step__btn {
+        width: 56px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .step__back, .step__direct {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .top-panel__item-list:nth-child(3) .btn {
+        position: relative;
+        z-index: 2;
+        width: 30px;
+        height: 36px;
+    }
+
+    .btn {
+        position: relative;
+        z-index: 2;
+        width: 32px;
+        height: 36px;
+    }
+
+    .step__btn:active .btn:nth-child(1) {
+        border-radius: 6px 0 0 6px;
+    }
+    
+    .btn:active .step__back path, .btn:active .menu__save__function path {
+        fill: #FFFFFF;
+    }
+}

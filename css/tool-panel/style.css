@@ -1,0 +1,122 @@
+@media (min-width: 1441px) {
+
+    /* tool-panel */
+
+    .tool-panel {
+        width: 52px;
+        height: 528px;
+
+        position: fixed;
+        z-index: 2;
+        top: 130px;
+        left: 18px;
+        box-shadow: 4px 4px 4px 0px #00000040;
+    }
+
+    .btn.redactor, .btn.shapes {
+        width: 52px;
+        height: 44px;
+    }
+
+    .redactor__icon {
+        width: 52px;
+        height: 44px;
+        padding: 10px 16px;
+    }
+}
+
+/* шириной от 769px и до 1440px, либо горизонтальное расположение до 1440px */
+
+@media (min-width: 769px) and (max-width: 1440px), (orientation: landscape) and (max-width: 1440px) {
+
+    /* tool-panel */
+
+    .tool-panel {
+        width: 52px;
+        height: 528px;
+
+        position: fixed;
+        z-index: 2;
+        top: 130px;
+        left: 18px;
+        box-shadow: 4px 4px 4px 0px #00000040;
+    }
+
+    .btn.redactor, .btn.shapes {
+        width: 52px;
+        height: 44px;
+    }
+
+    /* .btn.redactor active */
+
+    .redactor__icon {
+        width: 52px;
+        height: 44px;
+        padding: 10px 16px;
+    }
+}
+
+/* .tool-panel */
+
+.tool-panel {
+    border-radius: 6px;
+    border: none;
+    background-color: #1043C7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.redactor, .btn.shapes {
+    position: relative;
+    z-index: 2;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .btn.redactor active */
+
+.menu-grab:active .btn.redactor,
+.menu-grab:hover .btn.redactor {
+    border-radius: 6px 6px 0px 0px;
+    box-shadow: 0 1px 0 0 #FFFFFF;
+    background: #FFFFFF;
+    }
+
+.menu-3D-shapes:active .btn.redactor,
+.menu-3D-shapes:hover .btn.redactor {
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: 0 1px 0 0 #FFFFFF;
+    background: #FFFFFF;
+}
+
+.btn.redactor:active, .btn.shapes:active,
+.btn.redactor:hover, .btn.shapes:hover 
+{
+    box-shadow: 0 1px 0 0 #FFFFFF;
+    background: #FFFFFF;
+}
+
+.btn.shapes:active .redactor__icon path,
+.btn.shapes:hover .redactor__icon path
+{
+    stroke: #1043C7;
+}
+
+.btn.redactor:active .redactor__icon path,
+.btn.redactor:hover .redactor__icon path
+{
+    fill: #1043C7;
+}
+
+.separator.skyline {
+    transform: rotate(90deg);
+    margin-left: 40px;
+}
+
+
+
