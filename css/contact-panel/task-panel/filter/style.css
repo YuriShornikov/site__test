@@ -1,0 +1,155 @@
+/* шириной до 768px и в вертикальном расположении */
+
+@media (max-width: 768px) and (orientation: portrait) {
+
+    .filter-panel {
+        width: 183px;
+        height: 255px;
+        top: 4px;
+        right: 0px;
+        z-index: 2;
+        padding: 10px 13px 8px 10px;
+        box-shadow: 0px 2px 4px 0px #00000040;
+    }
+    
+    .filter-panel-list {
+        gap: 6px;
+    }
+
+    .filter__header {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        color: #1043C7;
+        margin-bottom: 10px;
+    }
+
+    .inp.filter {
+        width: 162px;
+        height: 19px;
+        border: 1px solid #1043C7;
+        border-radius: 10px;
+        padding: 6px 0px 6px 8px;
+        font-weight: 500;
+        font-size: 8px;
+        line-height: 8px;
+    }
+
+    .inp.filter::placeholder {
+        font-weight: 500;
+        font-size: 8px;
+        line-height: 8px;
+        color: #BABABA;
+    }
+
+    h6 {
+        height: 4px;
+        font-weight: 500;
+        font-size: 8px;
+        line-height: 8px;
+    }
+
+    .btn-filter-form {
+        width: 148px;
+        position: absolute;
+        z-index: 3;
+        right: 19px;
+        top: 199px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .btn-filter-item {
+        width: 148px;
+        height: 20px;
+
+    }
+}
+
+/* шириной от 769px и в вертикальном расположении */
+
+@media (min-width: 769px), (orientation: landscape) and (max-width: 1440px) {
+
+    .filter-panel {
+        width: 584px;
+        height: 387px;
+        top: 20px;
+        right: 0px;
+        padding: 10px 22px 10px 10px;
+        box-shadow: 0px 4px 4px 0px #00000040;
+    }
+
+    .filter__header {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 22px;
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    .inp.filter {
+        width: 552px;
+        height: 33px;
+        border: 1px solid #1043C7;
+        border-radius: 10px;
+        padding: 10px 0px 10px 10px;
+    }
+
+    .inp.filter::placeholder {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        color: #BABABA;
+    }
+
+    .filter-panel-list {
+        gap: 10px;
+    }
+
+    h6 {
+        font-weight: 500;
+        font-size: 12x;
+        line-height: 12px;
+    }
+
+    .btn-filter-form {
+        width: 380px;
+        position: absolute;
+        z-index: 3;
+        right: 22px;
+        top: 347px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .btn-filter-item {
+        width: 180px;
+        height: 30px;
+
+    }
+}
+
+.filter-panel {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    list-style: none;
+    cursor: auto;
+}
+
+.filter-panel-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-panel-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

@@ -4,7 +4,7 @@
     /* .contact-panel */
 
     .contact-panel {
-        width: 102px;
+        max-width: 102px;
         height: 36px;
 
         position: fixed;

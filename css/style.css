@@ -7,6 +7,10 @@
 @import url('./contact-panel/task-panel/style.css');
 @import url('./tool-panel/style.css');
 @import url('./tool-panel/mobile-style.css');
+@import url('./contact-panel/task-panel/filter/style.css');
+@import url('./contact-panel/task-panel/btn-send/style.css');
+
+/* @import url('./contact-panel/task-panel/style-correct.css'); */
 
 
 
@@ -18,7 +22,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;;
+    font-family: 'Inter', sans-serif;
 }
 
 .desk {
@@ -184,4 +188,14 @@ body {
 .btn.task:hover .task-panel,
 .btn.task:focus-within .task-panel {
     display: block;
+}
+
+.btn-filter:hover .filter-panel,
+.btn-filter:focus-within .filter-panel {
+    display: block;
+}
+
+.btn.send:hover .task__send-teachers,
+.btn.send:focus-within .task__send-teachers {
+    display: flex;
 }

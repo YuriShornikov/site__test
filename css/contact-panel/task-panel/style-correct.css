@@ -1,0 +1,28 @@
+/* шириной до 768px и в вертикальном расположении */
+@media (max-width: 768px) and (orientation: portrait) {
+
+    .btn.task:active {
+        border-radius: 6px 0 0 6px;
+    }
+
+    .btn.translate:active {
+        border-radius: 0;
+    }
+}
+
+/* шириной от 1441px и в вертикальном расположении */
+@media (min-width: 1441px) {
+
+    .contact-panel {
+        left: 1009px;
+    }
+
+    .task-panel {
+        top: 52px;
+        right: -213px;
+    }
+}
+
+.btn.task {
+    display: inline-flex;
+}

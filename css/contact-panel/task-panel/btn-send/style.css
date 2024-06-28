@@ -1,0 +1,90 @@
+@media (max-width: 768px) and (orientation: portrait) {
+
+
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1440px), (orientation: landscape) and (max-width: 1440px) {
+
+    .task__send-teachers {
+        width: 290px;
+        height: 282px;
+        top: 72px;
+        padding: 20px 10px;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        border-radius: 10px;
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        cursor: auto;
+    }
+
+    .task__send-teachers-item {
+        width: 55px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .task__send-teachers-item p {
+        height: 23px;
+        color: black;
+        text-align: center;
+        margin: 4px 0 0 0;
+        font-family: 'Inter', sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 12px;
+        text-align: center;
+    }
+
+    .task__send-teachers-item:nth-child(-n+4) p {
+        margin: 4px 0 3px 0;
+    }
+
+    .task__send-teachers-item img {
+            width: 55px;
+            height: 55px;
+        }
+
+
+    .task__send-teachers-list {
+        list-style: none;
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .task__send-teachers {
+        position: absolute;
+        left: -10%;
+        z-index: 1;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        list-style: none;
+    }
+
+    .btn-task__send {
+        width: 270px;
+        height: 38px;
+        border-radius: 10px;
+        border: none;
+        background-color: #ECECEC;
+        color: #828282;
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21.6px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+}
+
+
+
+

@@ -1,11 +1,7 @@
 /* шириной до 768px и в вертикальном расположении */
 @media (max-width: 768px) and (orientation: portrait) {
 
-    .btn.task {
-
-    }
-
-    .task-panel{
+    .task-panel {
         width: 183px;
         height: 192px;
     
@@ -235,6 +231,7 @@
 .task-panel {
     list-style: none;
     display: none;
+    cursor: auto;
 }
 
 .task-panel-scrollbar {
@@ -322,4 +319,12 @@
     background-color: #1043C7;
     color: #FFFFFF;
     font-weight: 500;
+}
+
+.btn.task {
+    display: none;
+}
+
+.btn-filter, .btn-task {
+    cursor: pointer;
 }
