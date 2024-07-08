@@ -59,7 +59,7 @@
         padding: 0px 12px 0px 12px;
     }
 
-    .photo-iphone {
+    .photo-mobile {
         display: none;
     }
 }
@@ -103,6 +103,7 @@
 }
 
 .btn.send {
+    list-style: none;
     width: 129px;
     height: 24px;
     border: none;
@@ -116,12 +117,19 @@
     line-height: 14.52px;
     color: #FFFFFF;
     cursor: pointer;
+    text-align: center;
 }
 
 .btn.send:active {
     color: #1043C7;
     background-color: #FFFFFF;
 }
+
+.btn.new-task {
+    display: none;
+}
+
+
 
 .video__call {
     display: flex;

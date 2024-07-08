@@ -145,11 +145,6 @@
 /* шириной до 768px и в вертикальном расположении */
 
 @media (max-width: 768px) and (orientation: portrait) {
-
-    /* Скрыл в контакт панели кнопку отправить */
-    .contact-panel__item-list:nth-child(1) {
-        display: none;
-    }
     
     .btn.translate {
         border-radius: 10px 0 0 10px;

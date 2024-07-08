@@ -4,7 +4,6 @@
     /* .contact-panel */
 
     .contact-panel {
-        max-width: 102px;
         height: 36px;
 
         position: fixed;
@@ -15,6 +14,11 @@
         border: none;
 
         display: flex;
+    }
+
+    .task__send {
+        margin-left: 8px;
+        gap: 8px;
     }
 
     /* Скрыл в контакт панели кнопку отправить */
@@ -70,10 +74,19 @@
         display: none;
     }
 
-    .photo-iphone {
-        width: 38px;
-        height: 36px;
-        padding: 2px 8px 6px 8px;
+    .photo-mobile {
+        padding: 7px 8px 7px 8px;
+        border-radius: 6px;
+    }
+
+    .contact-panel__item-list:focus {
+        border-radius: 10px;
+    }
+
+    .task-panel-photo {
+        width: 24px;
+        height: 24px;
+        background-image: url('/src/images/contact-panel/task-panel/mobile/photo.svg');
     }
 }
 

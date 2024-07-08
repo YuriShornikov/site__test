@@ -1,18 +1,25 @@
 /* подключение шрифта */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('./top-panel/style.css');
-@import url('./top-panel/mobile-style.css');
+
+@import url('./3D-shapes/style.css');
+
 @import url('./contact-panel/style.css');
 @import url('./contact-panel/mobile-style.css');
+@import url('./contact-panel/new-task/style.css');
 @import url('./contact-panel/task-panel/style.css');
+@import url('./contact-panel/task-panel/btn-send/style.css');
+@import url('./contact-panel/task-panel/filter/style.css');
+@import url('./contact-panel/video/style.css');
+
+@import url('./pen/style.css');
+
+@import url('./shapes/style.css');
+
 @import url('./tool-panel/style.css');
 @import url('./tool-panel/mobile-style.css');
-@import url('./contact-panel/task-panel/filter/style.css');
-@import url('./contact-panel/task-panel/btn-send/style.css');
 
-/* @import url('./contact-panel/task-panel/style-correct.css'); */
-
-
+@import url('./top-panel/style.css');
+@import url('./top-panel/mobile-style.css');
 
 
 * {
@@ -31,29 +38,93 @@ body {
     background-color: #E9E9E9;
 }
 
-/* щириной от 1441px */
-
-@media (min-width: 1441px) {
+/* шириной до 768px и в вертикальном расположении */
+@media (max-width: 768px) and (orientation: portrait) {
     
+    body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
     .desk {
         width: 100%;
-        height: 2014px;
+        height: calc(100vh - 54px);
         position: relative;
+        margin-top: 54px;
     }
 
-    .top-mobile-panel {
-        display: none;
-    }
-
-    .photo-iphone {
+    .top-panel-logo {
         display: none;
     }
 
     .scale-panel {
+        display: none;
+    }
+
+    /* .top-mobile-panel */
+
+    .top-mobile-panel {
+        width: 100%;
+        height: 50px;
+
         position: fixed;
         z-index: 2;
-        bottom: 16px;
-        left: 1138px;
+        top: 10px;
+        padding: 4px 16px;
+        
+        background-color: #FFFFFF;
+        display: flex;
+    }
+
+    .top-mobile-panel-elemets {
+        list-style: none;
+        width: 100%;
+        max-height: 42px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-mobile-panel-logo {
+        width: 128px;
+        height: 42px;
+        display: flex;
+    }
+
+    .top-mobile-panel-list {
+        width: 30px;
+        height: 30px;
+        display: flex;
+    }
+
+    .sub-tool-panel__colors {
+        display: none;
+    }
+
+    /* sub-tool-panel-3D-shapes */
+
+    .sub-tool-panel-3D-shapes {
+        display: none;
+    }
+
+    /* sub-tool-panel-3D-shapes-colors */
+
+    .sub-tool-panel-3D-shapes-colors {
+        display: none;
+    }
+
+    .scale-panel {
+        display: none;
+    }
+
+    .task-panel-photo {
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/contact-panel/task-panel/mobile/photo.svg');
     }
 }
 
@@ -76,7 +147,56 @@ body {
         right: 16px;
     }
 
+    .scale-panel {
+        display: flex;
+    }
+
+    .task-panel-photo {
+        width: 55px;
+        height: 55px;
+        background-image: url('../images/contact-panel/task-panel/pk/photo.svg');
+    }
+
+
 }
+
+/* щириной от 1441px */
+
+@media (min-width: 1441px) {
+    
+    .desk {
+        width: 100%;
+        height: 2014px;
+        position: relative;
+    }
+
+    .top-mobile-panel {
+        display: none;
+    }
+
+    .photo-mobile {
+        display: none;
+    }
+
+    .scale-panel {
+        position: fixed;
+        z-index: 2;
+        bottom: 16px;
+        left: 1138px;
+    }
+
+    .scale-panel {
+        display: flex;
+    }
+
+    .task-panel-photo {
+        width: 55px;
+        height: 55px;
+        background-image: url('../images/contact-panel/task-panel/pk/photo.svg');
+    }
+}
+
+
 
 /* отключенное в топ панели top-panel*/
 
@@ -90,8 +210,6 @@ body {
     max-width: 286px;
     max-height: 52px;
 
-
-    display: flex;
     flex-direction: row;
     gap: 20px;
 }
@@ -199,3 +317,9 @@ body {
 .btn.send:focus-within .task__send-teachers {
     display: flex;
 }
+
+.btn.translate:hover .video__call-form,
+.btn.translate:focus-within .video__call-form {
+    display: flex;
+}
+
