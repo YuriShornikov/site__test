@@ -486,7 +486,6 @@
                             <ul class="sub-tool-panel__list">
                                 <li class="sub-tool-panel__item-list">
                                     <img src="images/redactor/shapes/square.svg" alt="square">
-                                    <!-- <div class="square"></div> -->
                                 </li>
                                 <li class="sub-tool-panel__item-list">
                                     <img src="images/redactor/shapes/circle.svg" alt="circle">
@@ -794,6 +793,67 @@
             }
         })
 
+        // скролл
+        function setupCustomScrollbar(listSelector, scrollbarSelector, scrollThumbSelector) {
+            const list = document.querySelector(listSelector);
+            const customScroll = document.querySelector(scrollThumbSelector);
+            const customScrollbar = document.querySelector(scrollbarSelector);
+            console.log(document.querySelector('.sub-tool-panel-3D-shapes .sub-tool-panel__base-scroll'))
+
+            const updateScrollPosition = () => {
+                const scrollRatio = list.scrollTop / (list.scrollHeight - list.clientHeight);
+                const topPosition = scrollRatio * (customScrollbar.clientHeight - customScroll.clientHeight);
+                customScroll.style.top = `${topPosition}px`;
+            };
+
+            list.addEventListener('scroll', updateScrollPosition);
+
+            let isDragging = false;
+            let startY;
+            let startTop;
+
+            customScroll.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startY = e.clientY;
+                startTop = customScroll.offsetTop;
+                document.body.style.userSelect = 'none';
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                document.body.style.userSelect = 'auto';
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    const deltaY = e.clientY - startY;
+                    let newTop = startTop + deltaY;
+                    newTop = Math.max(0, Math.min(newTop, customScrollbar.clientHeight - customScroll.clientHeight));
+                    customScroll.style.top = `${newTop}px`;
+
+                    const scrollRatio = newTop / (customScrollbar.clientHeight - customScroll.clientHeight);
+                    list.scrollTop = scrollRatio * (list.scrollHeight - list.clientHeight);
+                }
+            });
+
+            // Добавляем прокрутку колесиком мыши
+            list.addEventListener('wheel', (e) => {
+                e.preventDefault(); // предотвращаем стандартную прокрутку
+                list.scrollTop += e.deltaY;
+
+                // Обновляем позицию кастомного скроллбара
+                updateScrollPosition();
+            });
+
+            // Обновляем позицию скролла при загрузке страницы
+            updateScrollPosition();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            setupCustomScrollbar('.sub-tool-panel__list', '.sub-tool-panel__base-scroll', '.sub-tool-panel__scroll');
+            setupCustomScrollbar('.sub-tool-panel__3D-shapes-list', '.sub-tool-panel-3D-shapes .sub-tool-panel__base-scroll', '.sub-tool-panel-3D-shapes .sub-tool-panel__scroll');
+        });
+            
         
         
     </script>

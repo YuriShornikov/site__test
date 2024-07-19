@@ -108,7 +108,7 @@
 
 /* шириной от 769px и до 1440px, либо горизонтальное расположение до 1440px */
 
-@media (min-width: 769px), (orientation: landscape) and (max-width: 1440px) {
+@media (min-width: 769px), (orientation: landscape) {
 
     .task-panel {
         width: 584px;
@@ -214,19 +214,6 @@
         border-radius: 10px;
         border: 1px solid #1043C7;
     }    
-}
-
-/* щириной от 1441px */
-
-@media (min-width: 1441px) {
-
-    .task-panel {
-        width: 584px;
-        height: 446px;
-        top: 0px;
-        right: -165px;
-        position: absolute;
-    }
 }
 
 .task-panel {

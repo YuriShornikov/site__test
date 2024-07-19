@@ -1,33 +1,6 @@
-@media (min-width: 1441px) {
-
-    /* tool-panel */
-
-    .tool-panel {
-        width: 52px;
-        height: 528px;
-
-        position: fixed;
-        z-index: 2;
-        top: 130px;
-        left: 18px;
-        box-shadow: 4px 4px 4px 0px #00000040;
-    }
-
-    .btn.redactor, .btn.shapes {
-        width: 52px;
-        height: 44px;
-    }
-
-    .redactor__icon {
-        width: 52px;
-        height: 44px;
-        padding: 10px 16px;
-    }
-}
-
 /* шириной от 769px и до 1440px, либо горизонтальное расположение до 1440px */
 
-@media (min-width: 769px) and (max-width: 1440px), (orientation: landscape) and (max-width: 1440px) {
+@media (min-width: 769px), (orientation: landscape) {
 
     /* tool-panel */
 

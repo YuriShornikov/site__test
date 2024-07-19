@@ -50,6 +50,7 @@
     .sub-tool-panel__scroll {
         width: 7px;
         height: 130px;
+        position: relative;
     }
     
     .sub-tool-panel__list {
@@ -175,6 +176,7 @@
     .sub-tool-panel__scroll {
         width: 4px;
         height: 53px;
+        position: relative;
     }
     
     .sub-tool-panel__list {

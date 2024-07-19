@@ -69,7 +69,7 @@
 
 /* шириной от 769px и в вертикальном расположении */
 
-@media (min-width: 769px), (orientation: landscape) and (max-width: 1440px) {
+@media (min-width: 769px), (orientation: landscape) {
 
     .filter-panel {
         width: 584px;
