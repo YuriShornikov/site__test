@@ -798,7 +798,16 @@
             const list = document.querySelector(listSelector);
             const customScroll = document.querySelector(scrollThumbSelector);
             const customScrollbar = document.querySelector(scrollbarSelector);
-            console.log(document.querySelector('.sub-tool-panel-3D-shapes .sub-tool-panel__base-scroll'))
+
+            if (!list || !customScroll || !customScrollbar) {
+                console.error('One or more elements not found:', { list, customScroll, customScrollbar });
+                return;
+            }
+
+            let isDragging = false;
+            let startY;
+            let startTop;
+            let isScrolling = false;
 
             const updateScrollPosition = () => {
                 const scrollRatio = list.scrollTop / (list.scrollHeight - list.clientHeight);
@@ -806,11 +815,17 @@
                 customScroll.style.top = `${topPosition}px`;
             };
 
-            list.addEventListener('scroll', updateScrollPosition);
+            const onScroll = () => {
+                if (!isScrolling) {
+                    isScrolling = true;
+                    requestAnimationFrame(() => {
+                        updateScrollPosition();
+                        isScrolling = false;
+                    });
+                }
+            };
 
-            let isDragging = false;
-            let startY;
-            let startTop;
+            list.addEventListener('scroll', onScroll);
 
             customScroll.addEventListener('mousedown', (e) => {
                 isDragging = true;
@@ -836,16 +851,12 @@
                 }
             });
 
-            // Добавляем прокрутку колесиком мыши
             list.addEventListener('wheel', (e) => {
-                e.preventDefault(); // предотвращаем стандартную прокрутку
+                e.preventDefault();
                 list.scrollTop += e.deltaY;
-
-                // Обновляем позицию кастомного скроллбара
-                updateScrollPosition();
+                onScroll();
             });
 
-            // Обновляем позицию скролла при загрузке страницы
             updateScrollPosition();
         }
 
