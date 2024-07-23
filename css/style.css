@@ -101,21 +101,7 @@ body {
         display: flex;
     }
 
-    .sub-tool-panel__colors {
-        display: none;
-    }
 
-    /* sub-tool-panel-3D-shapes */
-
-    /* .sub-tool-panel-3D-shapes {
-        display: none;
-    } */
-
-    /* sub-tool-panel-3D-shapes-colors */
-
-    .sub-tool-panel-3D-shapes-colors {
-        display: none;
-    }
 
     .scale-panel {
         display: none;
@@ -235,7 +221,9 @@ body {
 
 .sub-tool-panel__pen, 
 .sub-tool-panel, 
-.sub-tool-panel__colors, 
+.menu-3D-shapes .sub-tool-panel__colors,
+.menu-shapes .sub-tool-panel__colors, 
+.sub-tool-panel-3D-shapes-colors,
 .sub-tool-panel-3D-shapes, 
 .sub-tool-panel-3D-shapes-colors {
     display: none;
@@ -249,14 +237,23 @@ body {
 
 .menu-shapes:hover .sub-tool-panel,
 .menu-shapes:focus-within .sub-tool-panel,
-.menu-shapes:hover .sub-tool-panel__colors,
-.menu-shapes:focus-within .sub-tool-panel__colors,
+
 .menu-3D-shapes:hover .sub-tool-panel-3D-shapes,
 .menu-3D-shapes:focus-within .sub-tool-panel-3D-shapes,
-.menu-3D-shapes:hover .sub-tool-panel-3D-shapes-colors,
-.menu-3D-shapes:focus-within .sub-tool-panel-3D-shapes-colors
+.menu-3D-shapes:hover .sub-tool-panel__colors,
+.menu-3D-shapes:focus-within .sub-tool-panel__colors
  {
     display: flex;
+}
+
+.menu-shapes:hover .sub-tool-panel__colors,
+.menu-shapes:focus-within .sub-tool-panel__colors {
+    display: grid;
+}
+
+.menu-3D-shapes:hover .sub-tool-panel,
+.menu-3D-shapes:focus-within .sub-tool-panel {
+    display: grid;
 }
 
 .sub-tool-panel__item-list:nth-child(1):focus .square {

@@ -155,7 +155,7 @@
     stroke: #1043C7;
 }
 
-.sub-tool-panel__colors-item:nth-child(2) {
+/* .sub-tool-panel__colors-item:nth-child(2) {
     background-color: #DE3C3C;
 }
 
@@ -169,7 +169,7 @@
 
 .sub-tool-panel__colors-item:nth-child(5) {
     background-color: #33FF00;
-}
+} */
 
 .sub-tool-panel__pen-width-list {
     display: flex;
