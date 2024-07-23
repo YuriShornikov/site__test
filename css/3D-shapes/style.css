@@ -12,12 +12,12 @@
 
     .sub-tool-panel-3D {
         
-        top:-276px;
+        top:-406px;
         margin-left: 72px;
         width: 263px;
         height: 320px;
         border-radius: 12px;
-        box-shadow: 0px 4px 4px 0px #00000040;
+        box-shadow: 0px 4px 4px 4px #00000040;
     }
     
     .sub-tool-panel__3D-shapes-list {
@@ -38,7 +38,7 @@
     }
     
     .menu-3D-shapes .sub-tool-panel__colors {
-        top: 56px;
+        top: -76px;
     }
 }
 
