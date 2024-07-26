@@ -37,7 +37,7 @@ body {
     position: relative;
     width:100%;
     height: 100vh;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     background-color: #E9E9E9;
 }
 
@@ -218,7 +218,8 @@ body {
 }
 
 .sub-tool-panel__pen, 
-.sub-tool-panel, 
+.sub-tool-panel,
+.sub-tool-panel,
 .menu-3D-shapes .sub-tool-panel__colors,
 .menu-shapes .sub-tool-panel__colors, 
 .sub-tool-panel-3D-shapes-colors,
@@ -226,6 +227,13 @@ body {
 .sub-tool-panel-3D-shapes-colors {
     display: none;
 }
+
+/* Для фигур 2D */
+
+/* .btn.shapes:hover .sub-tool-panel,
+.btn.shapes:focus-within .sub-tool-panel {
+    display: flex;
+} */
 
 .menu-pen:hover .sub-tool-panel__pen,
 .menu-pen:focus-within .sub-tool-panel__pen

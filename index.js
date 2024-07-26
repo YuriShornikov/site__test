@@ -8,11 +8,16 @@
 
 // import './js/app';
 
-const menuShapes = document.querySelector('.btn.shapes');
-const itemListFocus = document.querySelectorAll('.sub-tool-panel__item-list');
 
 document.querySelectorAll('.sub-tool-panel__item-list').forEach(item => {
     item.addEventListener('click', () => {
+        // import('./css/square/style.css')
+        // .then(() => {
+        //     console.log('Styles loaded successfully.');
+        // })
+        // .catch((err) => {
+        //     console.error('Failed to load styles:', err);
+        // });
         document.querySelectorAll('.square').forEach(i => {
             i.style.display = 'block';
         })
@@ -31,9 +36,19 @@ document.querySelector('.menu-text').addEventListener('click', () => {
     document.head.appendChild(textLink);
 });
 
+// document.querySelector('.menu-text').addEventListener('click', () => {
+//     import('./css/text/style.css')
+//         .then(() => {
+//             console.log('Styles loaded successfully.');
+//         })
+//         .catch((err) => {
+//             console.error('Failed to load styles:', err);
+//         });
+// })
+
 // для отрисовки квадрата, необходим допил через код
 
-itemListFocus.forEach(item => {
+document.querySelectorAll('.sub-tool-panel__item-list').forEach(item => {
     item.addEventListener('click', () => {
         let squareLink = document.createElement('link');
         squareLink.id = 'squareLink';
@@ -52,6 +67,16 @@ setTimeout(() => {
     correctTaskLink.href = './css/contact-panel/task-panel/style-correct.css';
     document.head.appendChild(correctTaskLink);
 }, 4000);
+
+// setTimeout(() => {
+//     import('./css/contact-panel/task-panel/style-correct.css')
+//         .then(() => {
+//             console.log('Styles loaded successfully.');
+//         })
+//         .catch((err) => {
+//             console.error('Failed to load styles:', err);
+//         });
+// }, 4000);
 
 // для всех иконок при выпадении из кнопки "отправить задание" переключаем цвет кнопки отправить на синий
 

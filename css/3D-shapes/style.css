@@ -3,17 +3,14 @@
 @media (min-width: 769px), (orientation: landscape) {
     
     .sub-tool-panel-3D-shapes {
-        left: 0px;
-        top: 0px;
-        width: 335px;
-        height: 44px;
-        position: relative;
+        left: 72px;
+        top: -406px;
+        height: 450px;
+        width: 263px;
+        gap: 10px;
     }
 
     .sub-tool-panel-3D {
-        
-        top:-406px;
-        margin-left: 72px;
         width: 263px;
         height: 320px;
         border-radius: 12px;
@@ -36,10 +33,6 @@
     .sub-tool-panel__3D-shapes-item-list:active {
         border: 2px solid #1043C7;
     }
-    
-    .menu-3D-shapes .sub-tool-panel__colors {
-        top: -76px;
-    }
 }
 
 /* шириной до 768px и в вертикальном расположении */
@@ -47,17 +40,14 @@
 @media (max-width: 768px) and (orientation: portrait) {
 
     .sub-tool-panel-3D-shapes {
-        width: 185px;
-        height: 32px;
-
-        left: 0px;
-        top: 0px;
+        width: 142px;
+        height: 262px;
+        left: 46px;
+        top: -102px;
+        gap: 6px;
     }
 
     .sub-tool-panel-3D {
-        left: 0px;
-        top: -102px;
-        margin-left: 43px;
         width: 142px;
         height: 136px;
         border-radius: 12px;
@@ -86,11 +76,6 @@
         border: 2px solid #1043C7;
     }
     
-    /* .sub-tool-panel-3D-shapes-colors  */
-
-    .menu-3D-shapes .sub-tool-panel__colors {
-        top: 40px;
-    }
 }
 
 
@@ -101,11 +86,11 @@
 .sub-tool-panel-3D-shapes {
     position: absolute;
     z-index: 1;
+    flex-direction: column;
 
 }
 
 .sub-tool-panel-3D {
-    position: absolute;
     border: none;
     background-color: #FFFFFF;
     display: flex;

@@ -51,6 +51,11 @@
         border-radius: 50%;
         background-color: #33FF00;
     }
+
+    .square {
+        width: 150px;
+        height: 150px;
+    }  
 }
 
 /* шириной до 768px и в вертикальном расположении */
@@ -87,8 +92,8 @@
 
     .square {
         display: none;
-        width: 140px;
-        height: 140px;
+        width: 50px;
+        height: 50px;
         position: absolute;
         z-index: 1;
         top: 140px;
@@ -108,6 +113,11 @@
         border-radius: 50%;
         background-color: #33FF00;
     }
+
+    .square {
+        width: 140px;
+        height: 140px;
+    }
 }
 
 
@@ -125,9 +135,15 @@
     border-radius: 0px;
 }
 
-/* .square {
+.square {
     display: block;
-} */
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #33FF00;
+}  
 
 .sub-tool-panel {
     display: none;
